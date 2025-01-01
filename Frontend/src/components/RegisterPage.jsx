@@ -26,7 +26,7 @@ const RegisterPage = () => {
       return;
     }
     try {
-      const { data } = await axios.post("http://127.0.0.1:5000/api/login", { email, password });
+      const { data } = await axios.post("https://lucky-roll.onrender.com/api/login", { email, password });
       if (data) {
         notify("Login successful!", "success");
         localStorage.setItem("User", JSON.stringify(data.user))
@@ -58,7 +58,7 @@ const RegisterPage = () => {
       return;
     }
     try {
-      const { data } = await axios.post("http://127.0.0.1:5000/api/signup", {
+      const { data } = await axios.post("https://lucky-roll.onrender.com/api/signup", {
         email,
         name,
         password,

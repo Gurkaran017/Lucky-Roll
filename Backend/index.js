@@ -24,7 +24,11 @@ const PORT = process.env.PORT || 3001;
 
 const _dirname = path.resolve();
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  credentials:true,
+  origin:"https://lucky-roll.onrender.com"
+  }))
 app.use(express.json());
 
 // app.get("/", (req, res) => {
